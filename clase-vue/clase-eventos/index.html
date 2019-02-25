@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue</title>
+</head>
+
+<body>
+
+<main>
+        <ul>
+            <li v-for="tarea in tareas">
+                {{tarea}}
+            </li>
+        </ul>
+        <form  v-on:submit.prevent="agregarTarea">
+            <!-- El key modyfy(.enter) activa el evento, hay muchos de estos como lefy, right etc
+        Modificadores de evento (.prevent) seria como event.preventDefault() en un formulario -->
+        <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea">
+        <!-- <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea"> -->
+        <input type="submit" value="Enviar tarea" > 
+        </form>
+        
+        <pre>{{$data}}</pre>
+            
+    
+</main>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="eventos.js"></script>
+</body>
+
+</html>

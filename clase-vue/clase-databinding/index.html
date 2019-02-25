@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue</title>
+</head>
+<style>
+    li {
+        cursor: pointer
+    }
+    .completado {
+        text-decoration: line-through;
+    }
+</style>
+
+<body>
+
+<main>
+    <h1>Tareas</h1>
+    <h2>{{tareasCompletadas.length}} completadas</h2>
+    <ul>
+        <li :class="{completado: tarea.completado}" @click="completarTarea(tarea)"  v-for="tarea in tareas">
+            {{tarea.titulo}}
+        </li>
+    </ul>
+    <pre>{{$data}}</pre>
+    
+ 
+</main>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="dataBinding.js"></script>
+</body>
+
+</html>
