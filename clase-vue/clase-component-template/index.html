@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue</title>
+</head>
+
+<body>
+
+    <main>
+        <elegir-ganador :listado="personas" in-line-template>
+                <div>
+                        <h1 v-if="ganador">El ganador es: {{ganador}}</h1>
+                        <template v-else="">
+                            <h1>Participante</h1>
+                            <ul>
+                                <li v-for="persona in listado"> {{persona}}</li>
+                            </ul>
+                        </template>
+                        <button @click="elegirGanador">Elegir ganador </button>
+                    </div>
+        </elegir-ganador>
+        <pre>{{$data}}</pre>
+    </main>
+
+    <template id="elegir-ganador-template">
+        <div>
+            <h1 v-if="ganador">El ganador es: {{ganador}}</h1>
+            <template v-else="">
+                <h1>Participante</h1>
+                <ul>
+                    <li v-for="persona in listado"> {{persona}}</li>
+                </ul>
+            </template>
+            <button @click="elegirGanador">Elegir ganador </button>
+        </div>
+    </template>
+    <!-- <script type="text-template" id="elegir-ganador-template">
+        `<div>
+                    <h1 v-if="ganador">El ganador es: {{ganador}}</h1>
+                    <template v-else="">
+                        <h1>Participante</h1>
+                        <ul>
+                            <li v-for="persona in listado"> {{persona}}</li>
+                        </ul> 
+                    </template>
+                    <button @click="elegirGanador">Elegir ganador </button>
+                </div>`
+    </script> -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="componente.js"></script>
+</body>
+
+</html>

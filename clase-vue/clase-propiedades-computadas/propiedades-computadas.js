@@ -1,5 +1,5 @@
 //Propiedades computadas: manipulacion del modelo antes de renderizar en la vista.
-// Propiedades computadasvs methods_ un metodo se evalua constantemente y el otro se evalua cuando cambian las dependencias (ej: mensajes tareas)
+// Propiedades computadas vs methods_ un metodo se evalua constantemente y el otro se evalua cuando cambian las dependencias (ej: mensajes tareas)
 
 
 new Vue({
